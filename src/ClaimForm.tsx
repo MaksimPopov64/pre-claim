@@ -1,5 +1,5 @@
 // components/ClaimForm.jsx
-import React, { useState, FC, ChangeEvent, FormEvent } from 'react';
+import React, { useState, FC, FormEvent } from 'react';
 import './ClaimForm.css';
 
 interface ApiService {
@@ -182,17 +182,7 @@ export const ClaimForm: FC<ClaimFormProps> = ({ onPreview }) => {
     }
   };
 
-  const loadTemplate = async (templateId: string) => {
-    setLoading(true);
-    try {
-      const response = await apiService.getTemplate(templateId);
-      setFormData(response.data);
-    } catch (error) {
-      alert('Ошибка загрузки шаблона');
-    } finally {
-      setLoading(false);
-    }
-  };
+  
 
   return (
     <form className="claim-form" onSubmit={handleSubmit}>
