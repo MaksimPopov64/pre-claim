@@ -1,0 +1,315 @@
+.claim-form {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 20px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Form Sections */
+.form-section {
+  background-color: #ffffff;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  padding: 25px;
+  margin-bottom: 25px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.form-section h2 {
+  font-size: 20px;
+  font-weight: 600;
+  margin: 0 0 20px 0;
+  color: #333;
+  padding-bottom: 12px;
+  border-bottom: 2px solid #007bff;
+}
+
+.form-section h3 {
+  font-size: 16px;
+  font-weight: 600;
+  margin: 20px 0 15px 0;
+  color: #555;
+}
+
+/* Form Group */
+.form-group {
+  margin-bottom: 18px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: 500;
+  color: #333;
+  font-size: 14px;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+  width: 100%;
+  padding: 10px 12px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 14px;
+  font-family: inherit;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+  box-sizing: border-box;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+  outline: none;
+  border-color: #007bff;
+  box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.1);
+}
+
+.form-group input.error,
+.form-group select.error,
+.form-group textarea.error {
+  border-color: #dc3545;
+  box-shadow: 0 0 0 3px rgba(220, 53, 69, 0.1);
+}
+
+.form-group textarea {
+  resize: vertical;
+  min-height: 100px;
+  font-family: 'Courier New', monospace;
+}
+
+/* Form Row */
+.form-row {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 15px;
+}
+
+.form-row .form-group {
+  margin-bottom: 0;
+}
+
+.form-row.flex-full {
+  grid-template-columns: 1fr;
+}
+
+.form-group.flex-2 {
+  grid-column: span 2;
+}
+
+.form-group.flex-3 {
+  grid-column: span 1;
+}
+
+/* Error Messages */
+.error-message {
+  display: block;
+  color: #dc3545;
+  font-size: 12px;
+  margin-top: 5px;
+  font-weight: 500;
+}
+
+/* Select Styling */
+select {
+  appearance: none;
+  background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6 9 12 15 18 9'%3e%3c/polyline%3e%3c/svg%3e");
+  background-repeat: no-repeat;
+  background-position: right 10px center;
+  background-size: 18px;
+  padding-right: 35px;
+}
+
+select::-ms-expand {
+  display: none;
+}
+
+/* Button Styles */
+.form-actions {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  margin-top: 30px;
+  flex-wrap: wrap;
+}
+
+.btn {
+  padding: 12px 24px;
+  border: none;
+  border-radius: 4px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.btn-primary {
+  background-color: #007bff;
+  color: white;
+}
+
+.btn-primary:hover:not(:disabled) {
+  background-color: #0056b3;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 123, 255, 0.3);
+}
+
+.btn-secondary {
+  background-color: #6c757d;
+  color: white;
+}
+
+.btn-secondary:hover:not(:disabled) {
+  background-color: #545b62;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(108, 117, 125, 0.3);
+}
+
+.btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+/* Loading State */
+.loading {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.spinner {
+  display: inline-block;
+  width: 14px;
+  height: 14px;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  border-top-color: white;
+  border-radius: 50%;
+  animation: spin 0.6s linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Bank Details Section */
+.bank-details {
+  background-color: #f8f9fa;
+  padding: 15px;
+  border-radius: 4px;
+  border-left: 4px solid #007bff;
+  margin-bottom: 15px;
+}
+
+.bank-details .form-row {
+  margin-bottom: 0;
+}
+
+/* Address Section */
+.address-section {
+  background-color: #f8f9fa;
+  padding: 15px;
+  border-radius: 4px;
+  margin-bottom: 15px;
+}
+
+/* Attachment Upload */
+.attachment-upload {
+  border: 2px dashed #007bff;
+  border-radius: 4px;
+  padding: 20px;
+  text-align: center;
+  background-color: #f0f7ff;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.attachment-upload:hover {
+  border-color: #0056b3;
+  background-color: #e7f1ff;
+}
+
+.attachment-upload input {
+  display: none;
+}
+
+.attachment-upload-text {
+  color: #007bff;
+  font-weight: 500;
+  font-size: 14px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .claim-form {
+    padding: 15px;
+  }
+
+  .form-section {
+    padding: 15px;
+    margin-bottom: 15px;
+  }
+
+  .form-section h2 {
+    font-size: 18px;
+    margin-bottom: 15px;
+  }
+
+  .form-row {
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+
+  .form-group.flex-2,
+  .form-group.flex-3 {
+    grid-column: span 1;
+  }
+
+  .form-actions {
+    flex-direction: column;
+  }
+
+  .btn {
+    width: 100%;
+  }
+}
+
+/* Input Placeholder Styling */
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+  color: #999;
+}
+
+/* Focus Visible for Accessibility */
+.form-group input:focus-visible,
+.form-group select:focus-visible,
+.form-group textarea:focus-visible {
+  outline: 2px solid #007bff;
+  outline-offset: 2px;
+}
+
+/* Required Field Indicator */
+label::after {
+  content: '';
+}
+
+/* Fieldset Styling */
+fieldset {
+  border: none;
+  padding: 0;
+  margin: 0;
+}
+
+/* Legend Styling */
+legend {
+  font-size: 16px;
+  font-weight: 600;
+  color: #333;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #ddd;
+  width: 100%;
+  margin-bottom: 15px;
+}

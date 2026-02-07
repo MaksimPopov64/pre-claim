@@ -1,0 +1,153 @@
+.document-preview {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  background-color: #f5f5f5;
+}
+
+.preview-toolbar {
+  display: flex;
+  gap: 10px;
+  padding: 20px;
+  background-color: #fff;
+  border-bottom: 1px solid #ddd;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.preview-toolbar .btn {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.preview-toolbar .btn-primary {
+  background-color: #007bff;
+  color: white;
+}
+
+.preview-toolbar .btn-primary:hover {
+  background-color: #0056b3;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.preview-toolbar .btn-success {
+  background-color: #28a745;
+  color: white;
+}
+
+.preview-toolbar .btn-success:hover {
+  background-color: #1e7e34;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.document-container {
+  flex: 1;
+  overflow-y: auto;
+  padding: 20px;
+}
+
+.document-content {
+  background-color: white;
+  padding: 40px;
+  margin: 0 auto;
+  max-width: 900px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  line-height: 1.6;
+  font-family: 'Georgia', serif;
+  color: #333;
+}
+
+.document-content h1 {
+  text-align: center;
+  margin-bottom: 30px;
+  font-size: 24px;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.document-content h2 {
+  font-size: 16px;
+  font-weight: bold;
+  margin-top: 25px;
+  margin-bottom: 15px;
+  padding-bottom: 10px;
+  border-bottom: 2px solid #007bff;
+}
+
+.preview-section {
+  margin-bottom: 25px;
+}
+
+.preview-section p {
+  margin-bottom: 12px;
+  text-align: justify;
+}
+
+.preview-section strong {
+  font-weight: bold;
+}
+
+.description-box {
+  background-color: #f9f9f9;
+  border-left: 4px solid #007bff;
+  padding: 12px;
+  margin: 10px 0;
+  border-radius: 4px;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+}
+
+.footer-note {
+  text-align: center;
+  margin-top: 30px;
+  font-size: 12px;
+  color: #999;
+  border-top: 1px solid #ddd;
+  padding-top: 15px;
+}
+
+/* Print styles */
+@media print {
+  .document-preview {
+    background-color: white;
+  }
+
+  .preview-toolbar {
+    display: none;
+  }
+
+  .document-container {
+    padding: 0;
+    background-color: white;
+  }
+
+  .document-content {
+    max-width: 100%;
+    padding: 20px;
+    margin: 0;
+    box-shadow: none;
+  }
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .document-content {
+    padding: 20px;
+  }
+
+  .preview-toolbar {
+    flex-direction: column;
+  }
+
+  .preview-toolbar .btn {
+    width: 100%;
+  }
+}
